@@ -11,6 +11,6 @@ namespace CloudWeather.Dataloader.Models
         public DateTime CreatedOn { get; set; }
         public Decimal TempHighF { get; set; }
         public Decimal TempLowF { get; set; }
-        public string ZipCode { get; set; }
+        public string? ZipCode { get; set; }
     }
 }
