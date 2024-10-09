@@ -1,0 +1,19 @@
+﻿{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug",
+      "System": "Information",
+      "Microsoft": "Information"
+    }
+  },
+  "Services": {
+    "Temparature": {
+      "Host": "localhost",
+      "Port": "3000"
+    },
+    "Precipitation": {
+      "Host": "localhost",
+      "Port": "4000"
+    }
+  }
+}
