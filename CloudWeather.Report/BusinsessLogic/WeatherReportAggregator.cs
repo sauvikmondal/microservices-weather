@@ -90,7 +90,7 @@ namespace CloudWeather.Report.BusinsessLogic
             var tempServicePrtocol = _weatherDataConfig.TempDataProtocol;
             var tempServiceHost= _weatherDataConfig.TempDataHost;
             var tempServicePort = _weatherDataConfig.TempDataPort;
-            return $"{tempServicePrtocol}://{tempServicePort}:{tempServiceHost}/observation/{zip}?days={days}";
+            return $"{tempServicePrtocol}://{tempServiceHost}:{tempServicePort}/observation/{zip}?days={days}";
         }
 
         private async Task<List<PrecipitationModel>> FetchPrecipitationData(HttpClient httpClient, string zip, int days)
@@ -113,7 +113,7 @@ namespace CloudWeather.Report.BusinsessLogic
             var precipServicePrtocol = _weatherDataConfig.PrecipDataProtocol;
             var precipServiceHost = _weatherDataConfig.PrecipDataHost;
             var precipServicePort = _weatherDataConfig.PrecipDataPort;
-            return $"{precipServicePrtocol}://{precipServicePort}:{precipServiceHost}/observation/{zip}?days={days}";
+            return $"{precipServicePrtocol}://{precipServiceHost}:{precipServicePort}/observation/{zip}?days={days}";
         }
     }
 }

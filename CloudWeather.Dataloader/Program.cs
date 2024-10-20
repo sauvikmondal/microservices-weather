@@ -13,13 +13,13 @@ IConfiguration config = new ConfigurationBuilder()
 
 var servicesConfig = config.GetSection("Services");
 
-var tempServiceConfig = config.GetSection("Temparature");
+var tempServiceConfig = servicesConfig.GetSection("Temparature");
 var tempServiceHost = tempServiceConfig["Host"];
-var tempServicePort = tempServiceConfig["port"];
+var tempServicePort = tempServiceConfig["Port"];
 
-var precipServiceConfig = config.GetSection("Precipitation");
+var precipServiceConfig = servicesConfig.GetSection("Precipitation");
 var precipServiceHost = precipServiceConfig["Host"];
-var precipServicePort = precipServiceConfig["port"];
+var precipServicePort = precipServiceConfig["Port"];
 
 var zipCodes= new List<string>
 {
